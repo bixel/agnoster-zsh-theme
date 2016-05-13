@@ -26,7 +26,7 @@
 # A few utility functions to make it easy and re-usable to draw segmented prompts
 
 CURRENT_BG='NONE'
-PRIMARY_FG=black
+PRIMARY_FG=white
 
 # Characters
 SEGMENT_SEPARATOR="\ue0b0"
@@ -105,7 +105,7 @@ prompt_git() {
 prompt_virtualenv() {
   local virtualenv_path="$VIRTUAL_ENV"
   if [[ -n $virtualenv_path ]]; then
-    prompt_segment magenta black " `basename $virtualenv_path` "
+    prompt_segment magenta $PRIMARY_FG " `basename $virtualenv_path` "
   fi
 }
 
