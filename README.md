@@ -4,9 +4,9 @@ A ZSH theme optimized for people who use:
 
 - Solarized
 - Git
-- Unicode-compatible fonts and terminals (I use iTerm2 + Menlo)
+- Unicode-compatible fonts and terminals (I use iTerm2 + ~~Menlo~~ Source Code Pro)
 
-For Mac users, I highly recommend iTerm 2 + Solarized Dark
+For Mac users, I highly recommend iTerm 2 + Solarized ~~Dark~~ Light
 
 # Compatibility
 
