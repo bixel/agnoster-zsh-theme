@@ -110,8 +110,17 @@ prompt_virtualenv() {
 }
 
 # Dir: current working directory
+# Using prompt_sorin's abbreviation
 prompt_dir() {
-  prompt_segment blue $PRIMARY_FG ' %~ '
+  local pwd="${PWD/#$HOME/~}"
+
+  if [[ "$pwd" == (#m)[/~] ]]; then
+    prompt="$MATCH"
+    unset MATCH
+  else
+    prompt="${${${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}%/}//\%/%%}/${${pwd:t}//\%/%%}"
+  fi
+  prompt_segment blue $PRIMARY_FG " $prompt "
 }
 
 # Status:
