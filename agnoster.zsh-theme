@@ -103,9 +103,9 @@ prompt_git() {
 
 # Virtualenv: current working virtualenv
 prompt_virtualenv() {
-  if [[ "$VIRTUAL_ENV" ]]; then
+  if [[ -n "$VIRTUAL_ENV" ]]; then
     local virtualenv_path="$VIRTUAL_ENV"
-  elif [[ "$CONDA_DEFAULT_ENV" ]]; then
+  elif [[ -n "$CONDA_DEFAULT_ENV" ]]; then
     local virtualenv_path="$CONDA_DEFAULT_ENV"
   fi
   if [[ -n $virtualenv_path ]]; then
